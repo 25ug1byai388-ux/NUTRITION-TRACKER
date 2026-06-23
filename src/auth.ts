@@ -115,8 +115,9 @@ export const authConfig: NextAuthConfig = {
   // JWT configuration
   jwt: {
     maxAge: 30 * 24 * 60 * 60, // 30 days
-    secret: process.env.NEXTAUTH_SECRET,
   },
+
+  secret: process.env.NEXTAUTH_SECRET,
 
   // Events for logging
   events: {
@@ -133,13 +134,13 @@ export const authConfig: NextAuthConfig = {
 
   // Error handling
   logger: {
-    error: (code, metadata) => {
-      console.error(`NextAuth error [${code}]:`, metadata);
+    error: (error) => {
+      console.error(`NextAuth error:`, error);
     },
     warn: (code) => {
-      console.warn(`NextAuth warning [${code}]`);
+      console.warn(`NextAuth warning:`, code);
     },
-    debug: (code, metadata) => {
+    debug: (code, ...metadata) => {
       if (process.env.NODE_ENV === "development") {
         console.debug(`NextAuth [${code}]:`, metadata);
       }
