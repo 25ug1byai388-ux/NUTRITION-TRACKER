@@ -27,7 +27,7 @@ const protectedRoutes = [
   "/achievements",
 ];
 
-export async function middleware(request: NextRequest) {
+export default async function proxy(request: NextRequest) {
   const pathname = request.nextUrl.pathname;
 
   // Check if route is public
