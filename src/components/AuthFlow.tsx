@@ -237,6 +237,8 @@ export const AuthFlow = () => {
                   borderRadius: "8px",
                   fontSize: "14px",
                   boxSizing: "border-box",
+                  color: "#111827",
+                  backgroundColor: "#FFFFFF",
                 }}
               />
             </div>
@@ -267,6 +269,8 @@ export const AuthFlow = () => {
                 borderRadius: "8px",
                 fontSize: "14px",
                 boxSizing: "border-box",
+                color: "#111827",
+                backgroundColor: "#FFFFFF",
               }}
             />
           </div>
@@ -296,6 +300,8 @@ export const AuthFlow = () => {
                 borderRadius: "8px",
                 fontSize: "14px",
                 boxSizing: "border-box",
+                color: "#111827",
+                backgroundColor: "#FFFFFF",
               }}
             />
           </div>
